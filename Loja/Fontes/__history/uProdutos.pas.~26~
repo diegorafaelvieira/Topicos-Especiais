@@ -1,0 +1,153 @@
+unit uProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uDM, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.Buttons, PngBitBtn;
+
+type
+  TfrmProd = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Panel2: TPanel;
+    DBNavigator1: TDBNavigator;
+    DBText1: TDBText;
+    btInserir: TPngBitBtn;
+    btEditar: TPngBitBtn;
+    btExcluir: TPngBitBtn;
+    btCancelar: TPngBitBtn;
+    btConfirmar: TPngBitBtn;
+    btSair: TPngBitBtn;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btInserirClick(Sender: TObject);
+    procedure btEditarClick(Sender: TObject);
+    procedure btExcluirClick(Sender: TObject);
+    procedure btCancelarClick(Sender: TObject);
+    procedure btConfirmarClick(Sender: TObject);
+    procedure btSairClick(Sender: TObject);
+  private
+    { Private declarations }
+    Procedure TrataBotoes;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProd: TfrmProd;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmProd.btEditarClick(Sender: TObject);
+begin
+  TrataBotoes;
+  dm.tbProdutos.Edit;
+end;
+
+
+procedure TfrmProd.btExcluirClick(Sender: TObject);
+begin
+  if MessageDlg('Deseja realmente excluir?', mtConfirmation, [mbYes, mbNo], 0) = idYes
+  then
+    dm.tbProdutos.delete;
+end;
+
+procedure TfrmProd.btInserirClick(Sender: TObject);
+var
+  prox: integer;
+begin
+  TrataBotoes;
+
+  dm.tbProdutos.Last; // Posiciona no último registro
+  prox := dm.tbProdutos.FieldByName('cdproduto').AsInteger + 1;
+
+  dm.tbProdutos.Append; // Insere no final da tabela
+  dm.tbProdutos.FieldByName('cdproduto').AsInteger := prox;
+
+  // cxDBTextEdit1.SetFocus;
+  DBEdit2.SetFocus; // seta o Campo a ser preenchido
+end;
+
+procedure TfrmProd.btSairClick(Sender: TObject);
+begin
+if dm.tbProdutos.State IN [dsInsert, dsEdit] then
+  begin
+    MessageDlg('Cancele ou confirme a operação', mtWarning, [mbOk], 0);
+    Exit;
+  end;
+  Close;
+end;
+
+procedure TfrmProd.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  // dm.tbProdutos.Active := False;
+  dm.tbProdutos.Close;
+end;
+
+procedure TfrmProd.FormShow(Sender: TObject);
+begin
+  // dm.tbProdutos.Active := True;
+  dm.tbProdutos.Open;
+end;
+
+procedure TfrmProd.btCancelarClick(Sender: TObject);
+begin
+  dm.tbProdutos.Cancel;
+  TrataBotoes;
+end;
+
+procedure TfrmProd.btConfirmar2Click(Sender: TObject);
+begin
+  // Regras de validação
+  if dm.tbProdutos.FieldByName('DCPRODUTO').AsString = '' then
+  begin
+    MessageDlg('Falta digitar a descrição do produto', mtWarning, [mbOk], 0);
+    DBEdit2.SetFocus;
+    Exit;
+  end;
+
+  dm.tbProdutos.Post; // Grava as informações
+  TrataBotoes;
+end;
+
+procedure TfrmProd.btConfirmarClick(Sender: TObject);
+begin
+  // Regras de validação
+  if dm.tbProdutos.FieldByName('DCPRODUTO').AsString = '' then
+  begin
+    MessageDlg('Falta digitar a descrição do produto', mtWarning, [mbOk], 0);
+    DBEdit2.SetFocus;
+    Exit;
+  end;
+
+  dm.tbProdutos.Post; // Grava as informações
+  TrataBotoes;
+end;
+
+procedure TfrmProd.TrataBotoes;
+begin
+  btInserir.enabled := not btInserir.enabled;
+  btEditar.enabled := not btEditar.enabled;
+  btExcluir.enabled := not btExcluir.enabled;
+  btConfirmar.enabled := not btConfirmar.enabled;
+  btCancelar.enabled := not btCancelar.enabled;
+
+  DBNavigator1.enabled := not DBNavigator1.enabled;
+end;
+
+end.

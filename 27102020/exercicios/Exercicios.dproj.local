@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/29 21:44:35.000.580,=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 21:46:15.000.831,=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/10/29 21:48:17.000.049,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx1.pas</Transaction>
+    <Transaction>2020/10/29 21:48:17.000.049,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx1.dfm</Transaction>
+    <Transaction>2020/10/29 21:48:26.000.892,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uMenu.dfm</Transaction>
+    <Transaction>2020/10/29 21:48:26.000.892,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uMenu.pas</Transaction>
+    <Transaction>2020/10/29 21:48:35.000.365,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Exercicios.dproj</Transaction>
+    <Transaction>2020/10/29 21:50:01.000.416,=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.pas</Transaction>
+    <Transaction>2020/10/29 21:51:19.000.818,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.pas=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx2.pas</Transaction>
+    <Transaction>2020/10/29 21:51:19.000.818,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.dfm=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx2.dfm</Transaction>
+    <Transaction>2020/10/31 15:09:50.000.321,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx2.pas=</Transaction>
+    <Transaction>2020/11/01 22:57:36.000.692,=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.pas</Transaction>
+    <Transaction>2020/11/01 22:58:03.000.402,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.dfm=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx2.dfm</Transaction>
+    <Transaction>2020/11/01 22:58:03.000.402,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\Unit1.pas=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\27102020\exercicios\uEx2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,77 @@
+unit uCeps;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    lstDados: TListBox;
+    Label1: TLabel;
+    cbUf: TComboBox;
+    cbCidades: TComboBox;
+    Label2: TLabel;
+    Image1: TImage;
+    imgBandeira: TImage;
+    Label3: TLabel;
+    lbCep: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure cbUfChange(Sender: TObject);
+    procedure cbCidadesChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.cbCidadesChange(Sender: TObject);
+var
+  i: Integer;
+begin
+  for i := 0 to lstDados.Items.Count - 1 do
+  begin
+    if cbCidades.Items[cbCidades.ItemIndex] = lstDados.Items[i].Split([';'])[1] then
+      if cbUf.Items[cbUf.ItemIndex] = lstDados.Items[i].Split([';'])[4] then
+        lbCep.Caption := lstDados.Items[i].Split([';'])[3];
+  end;
+end;
+
+procedure TForm1.cbUfChange(Sender: TObject);
+var
+  i: Integer;
+begin
+  imgBandeira.Picture.LoadFromFile('..\..\assets\bandeiras\' + cbUf.Items[cbUf.ItemIndex] + '.jpg');
+  cbCidades.Clear;
+  for i := 0 to lstDados.Items.Count - 1 do
+  begin
+    if cbUf.Items[cbUf.ItemIndex] = lstDados.Items[i].Split([';'])[4] then
+      cbCidades.Items.Add(lstDados.Items[i].Split([';'])[1]);
+  end;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  i: Integer;
+begin
+  if FileExists('..\..\assets\tblCidades.txt') then
+    lstDados.Items.LoadFromFile('..\..\assets\tblCidades.txt', TEncoding.UTF8);
+
+  for i := 0 to lstDados.Items.Count - 1  do
+  begin
+    if cbUf.Items.IndexOf(lstDados.Items[i].Split([';'])[4]) = -1 then
+       cbUf.Items.Add(lstDados.Items[i].Split([';'])[4])
+  end;
+end;
+
+end.

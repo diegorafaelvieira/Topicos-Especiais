@@ -1,0 +1,87 @@
+unit uEx1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmCalc = class(TForm)
+    edOp1: TEdit;
+    edOp2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    btSoma: TButton;
+    btSub: TButton;
+    btMul: TButton;
+    btDiv: TButton;
+    lbRes: TLabel;
+    procedure btSomaClick(Sender: TObject);
+    procedure btSubClick(Sender: TObject);
+    procedure btMulClick(Sender: TObject);
+    procedure btDivClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+//var. Globais
+var
+  frmCalc: TfrmCalc;
+  op1, op2, r : Real;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCalc.btDivClick(Sender: TObject);
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 / op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);end;
+
+procedure TfrmCalc.btMulClick(Sender: TObject);
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 * op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);
+end;
+
+procedure TfrmCalc.btSomaClick(Sender: TObject);
+//var. Locais
+var op1, op2, r : Real;
+begin
+     if (edop1.Text = '') then
+     begin
+       messagedlg('Não foi digitado um número',
+                  mtError,
+                  [mbOk],
+                  0);
+       Exit;
+     end;
+
+     //Leitura
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     //Processamento
+     r := op1 + op2;
+
+     //Resultado
+     lbRes.caption := ' = ' + FloatToStr(r);
+end;
+
+procedure TfrmCalc.btSubClick(Sender: TObject);
+begin
+  lbRes.caption := ' = ' + FloatToStr(StrToFloat(edop1.Text)-StrToFloat(edop2.Text));
+end;
+
+end.

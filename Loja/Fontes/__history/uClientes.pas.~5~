@@ -1,0 +1,90 @@
+unit uClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uDM, Data.DB, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, Vcl.StdCtrls, Vcl.Buttons,
+  cxTextEdit, cxDBEdit;
+
+type
+  TfrmClientes = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    cxDBTextEdit1: TcxDBTextEdit;
+    Label3: TLabel;
+    cxDBTextEdit2: TcxDBTextEdit;
+    Label4: TLabel;
+    cxDBTextEdit3: TcxDBTextEdit;
+    Label5: TLabel;
+    cxDBTextEdit4: TcxDBTextEdit;
+    Label6: TLabel;
+    cxDBTextEdit5: TcxDBTextEdit;
+    Label7: TLabel;
+    cxDBTextEdit6: TcxDBTextEdit;
+    Panel2: TPanel;
+    btInserir: TBitBtn;
+    DBNavigator1: TDBNavigator;
+    btExcluir: TBitBtn;
+    btEditar: TBitBtn;
+    btCancelar: TBitBtn;
+    btConfirmar: TBitBtn;
+    btSair: TBitBtn;
+    DBText1: TDBText;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btInserirClick(Sender: TObject);
+  private
+    { Private declarations }
+    Procedure TrataBotoes;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmClientes: TfrmClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmClientes.btInserirClick(Sender: TObject);
+var
+   prox:integer;
+begin
+      Dm.tbClientes.Last;  //Posiciona no último registro
+      prox := Dm.tbClientes.FieldByName('cdcliente').asInteger + 1;
+
+      Dm.tbClientes.Append; //Insere no final da tabela
+      Dm.tbClientes.fieldbyname('cdcliente').asinteger := prox;
+
+      cxDBTextEdit1.SetFocus;
+end;
+procedure TfrmClientes.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+     //dm.tbClientes.Active := False;
+
+     dm.tbClientes.Close;
+end;
+
+procedure TfrmClientes.FormShow(Sender: TObject);
+begin
+     //dm.tbClientes.Active := True;
+
+     dm.tbClientes.Open;
+
+end;
+
+procedure TfrmClientes.TrataBotoes;
+begin
+     btInserir.enabled  := not BtInserir.enabled;
+     BtAlterar.enabled  := not BtAlterar.enabled;
+     BtExcluir.enabled  := not BtExcluir.enabled;
+     BtGravar.enabled   := not BtGravar.enabled;
+     BtCancelar.enabled := not BtCancelar.enabled;
+end;
+
+end.

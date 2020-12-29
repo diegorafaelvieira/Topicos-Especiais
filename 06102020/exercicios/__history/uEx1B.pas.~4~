@@ -1,0 +1,66 @@
+unit uEx1B;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  Tfrm1B = class(TForm)
+    btSair: TButton;
+    btWhileDo: TButton;
+    btForToDo: TButton;
+    procedure btSairClick(Sender: TObject);
+    procedure btWhileDoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm1B: Tfrm1B;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm1B.btSairClick(Sender: TObject);
+begin
+  //Ir Menu Principal
+  frm1B.Close;
+
+end;
+
+procedure Tfrm1B.btWhileDoClick(Sender: TObject);
+var gh, a : integer;
+begin
+{
+  a := 9;
+  while (a < 10) do
+  begin
+    a := a + 1;
+    memoWhileDo.Lines.Add(inttostr(a));
+  end;
+}
+  gh := 5;
+  a := 8;
+  while (gh <> 5) do
+  begin
+    a := a + gh;
+    showmessage(a.ToString);
+  end;
+
+end;
+
+end.
+
+{
+gh := 5; a := 8;
+Repeat
+  a := a + gh;
+  showmessage(a.ToString);
+until (gh <> 5);
+
+}

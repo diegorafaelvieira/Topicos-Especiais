@@ -1,0 +1,69 @@
+unit uEx1B;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  Tfrm1B = class(TForm)
+    btSair: TButton;
+    btWhileDo: TButton;
+    btForToDo: TButton;
+    procedure btSairClick(Sender: TObject);
+    procedure btWhileDoClick(Sender: TObject);
+    procedure btForToDoClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm1B: Tfrm1B;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm1B.btForToDoClick(Sender: TObject);
+begin
+  { Professor explicou que não existe conversão para FOR
+   porque o FOR é determinado }
+end;
+
+procedure Tfrm1B.btSairClick(Sender: TObject);
+begin
+  //Ir Menu Principal
+  frm1B.Close;
+
+end;
+
+procedure Tfrm1B.btWhileDoClick(Sender: TObject);
+var a : integer;
+    gh : string[1];
+
+begin
+  gh := 'S';
+  a := 8;
+  while (gh = 'S') do
+  begin
+    a := a + 5;
+    showMessage(a.ToString);
+
+    gh := InputBox('Deseja continuar (S/N)', 'Opção','S');
+  end;
+
+end;
+
+end.
+
+{
+gh := 5; a := 8;
+Repeat
+  a := a + gh;
+  showmessage(a.ToString);
+until (gh <> 5);
+
+}

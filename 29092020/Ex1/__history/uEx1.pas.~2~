@@ -1,0 +1,80 @@
+unit uEx1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edOp1: TEdit;
+    edOp2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    btSoma: TButton;
+    btSub: TButton;
+    btMul: TButton;
+    btDiv: TButton;
+    lbRes: TLabel;
+    procedure btSomaClick(Sender: TObject);
+    procedure btSubClick(Sender: TObject);
+    procedure btMulClick(Sender: TObject);
+    procedure btDivClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btDivClick(Sender: TObject);
+var op1, op2, r : Real;
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 / op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);end;
+
+procedure TForm1.btMulClick(Sender: TObject);
+var op1, op2, r : Real;
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 * op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);
+end;
+
+procedure TForm1.btSomaClick(Sender: TObject);
+var op1, op2, r : Real;
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 + op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);
+end;
+
+procedure TForm1.btSubClick(Sender: TObject);
+var op1, op2, r : Real;
+begin
+     op1 := StrToFloat(edop1.Text);
+     op2 := StrToFloat(edop2.Text);
+
+     r := op1 - op2;
+
+     lbRes.caption := ' = ' + FloatToStr(r);
+end;
+
+end.

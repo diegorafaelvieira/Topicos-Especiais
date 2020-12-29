@@ -1,0 +1,65 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    edA: TEdit;
+    Label2: TLabel;
+    edB: TEdit;
+    Label3: TLabel;
+    edC: TEdit;
+    btResolver: TButton;
+    lbX1: TLabel;
+    lbX2: TLabel;
+    procedure btResolverClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btResolverClick(Sender: TObject);
+var a,b,c,x1,x2,delta : Real;
+begin
+     lbX1.Caption := 'x''';
+     lbX2.Caption := 'x2''''';
+
+     a := StrToFloat(edA.Text);
+     b := StrToFloat(edB.Text);
+     c := StrToFloat(edC.Text);
+
+     delta := SQR(B) - 4*a*c;
+     if delta = 0 then
+     begin
+          x1 := -b / (2 * a);
+          lbX1.Caption := lbX1.Caption + ' = ' + FloatToStr(x1);
+     end
+     else
+     begin
+          if delta > 0 then
+          begin
+                // (-B +- SQRT(delta)) / 2 * a
+                x1 := (-B + SQRT(delta)) / 2 * a;
+                x2 := (-B - SQRT(delta)) / 2 * a;
+                lbX1.Caption := lbX1.Caption + ' = ' + FloatToStr(x1);
+                lbX2.Caption := lbX2.Caption + ' = ' + FloatToStr(x2);
+          end
+          else
+              MessageDlg('Não existem raízes reais!', mtError, [mbOk], 0);
+     end;
+end;
+
+end.

@@ -1,0 +1,78 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 115
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 32
+    Width = 6
+    Height = 13
+    Caption = 'P'
+  end
+  object Label2: TLabel
+    Left = 40
+    Top = 59
+    Width = 7
+    Height = 13
+    Caption = 'N'
+  end
+  object lbRes: TLabel
+    Left = 288
+    Top = 59
+    Width = 3
+    Height = 13
+  end
+  object edP: TEdit
+    Left = 69
+    Top = 29
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 0
+  end
+  object edN: TEdit
+    Left = 69
+    Top = 56
+    Width = 121
+    Height = 21
+    NumbersOnly = True
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 196
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'Calcula&r'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 88
+    Top = 83
+    Width = 75
+    Height = 25
+    Caption = 'Limpar'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object btSair: TButton
+    Left = 196
+    Top = 82
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 4
+  end
+end

@@ -1,0 +1,16 @@
+program Exercicios;
+
+uses
+  Vcl.Forms,
+  uMenu in 'uMenu.pas' {frmMenu},
+  uEx1 in 'uEx1.pas' {frmEx1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMenu, frmMenu);
+  Application.CreateForm(TfrmEx1, frmEx1);
+  Application.Run;
+end.

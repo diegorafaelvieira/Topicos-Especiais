@@ -1,0 +1,217 @@
+object frmProd: TfrmProd
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Produtos'
+  ClientHeight = 388
+  ClientWidth = 561
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 561
+    Height = 315
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 453
+    object Label1: TLabel
+      Left = 40
+      Top = 32
+      Width = 33
+      Height = 13
+      Caption = 'C'#243'digo'
+    end
+    object Label2: TLabel
+      Left = 40
+      Top = 72
+      Width = 46
+      Height = 13
+      Caption = 'Descri'#231#227'o'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 40
+      Top = 112
+      Width = 24
+      Height = 13
+      Caption = 'Valor'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 40
+      Top = 152
+      Width = 64
+      Height = 13
+      Caption = 'Qtd. Estoque'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 40
+      Top = 192
+      Width = 41
+      Height = 13
+      Caption = 'Qtd. Min'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 40
+      Top = 232
+      Width = 81
+      Height = 13
+      Caption = 'C'#243'd. Fornecedor'
+      FocusControl = DBEdit6
+    end
+    object DBText1: TDBText
+      Left = 40
+      Top = 51
+      Width = 65
+      Height = 17
+      DataField = 'CDPRODUTO'
+      DataSource = dm.dsProdutos
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object DBEdit2: TDBEdit
+      Left = 40
+      Top = 85
+      Width = 394
+      Height = 21
+      DataField = 'DCPRODUTO'
+      DataSource = dm.dsProdutos
+      TabOrder = 0
+    end
+    object DBEdit3: TDBEdit
+      Left = 40
+      Top = 128
+      Width = 81
+      Height = 21
+      DataField = 'VLPRODUTO'
+      DataSource = dm.dsProdutos
+      TabOrder = 1
+    end
+    object DBEdit4: TDBEdit
+      Left = 40
+      Top = 165
+      Width = 81
+      Height = 21
+      DataField = 'QTESTOQUE'
+      DataSource = dm.dsProdutos
+      TabOrder = 2
+    end
+    object DBEdit5: TDBEdit
+      Left = 40
+      Top = 208
+      Width = 81
+      Height = 21
+      DataField = 'QTMINIMA'
+      DataSource = dm.dsProdutos
+      TabOrder = 3
+    end
+    object DBEdit6: TDBEdit
+      Left = 40
+      Top = 248
+      Width = 81
+      Height = 21
+      DataField = 'CDFORNECEDOR'
+      DataSource = dm.dsProdutos
+      TabOrder = 4
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 210
+      Top = 45
+      Width = 224
+      Height = 25
+      DataSource = dm.dsProdutos
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      TabOrder = 5
+    end
+    object btSair2: TBitBtn
+      Left = 359
+      Top = 264
+      Width = 75
+      Height = 25
+      Caption = 'Sair'
+      TabOrder = 6
+      OnClick = btSair2Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 315
+    Width = 561
+    Height = 73
+    Align = alBottom
+    TabOrder = 1
+    ExplicitWidth = 453
+    object btConfirmar2: TBitBtn
+      Left = 353
+      Top = -8
+      Width = 75
+      Height = 25
+      Caption = 'Confirmar'
+      Enabled = False
+      TabOrder = 0
+      OnClick = btConfirmar2Click
+    end
+    object btInserir: TPngBitBtn
+      Left = 30
+      Top = 24
+      Width = 97
+      Height = 43
+      Caption = '&Inserir'
+      TabOrder = 1
+      OnClick = btInserirClick
+    end
+    object btEditar: TPngBitBtn
+      Left = 133
+      Top = 24
+      Width = 97
+      Height = 43
+      Caption = 'Editar'
+      TabOrder = 2
+      OnClick = btEditarClick
+    end
+    object btExcluir: TPngBitBtn
+      Left = 236
+      Top = 23
+      Width = 97
+      Height = 43
+      Caption = 'Excluir'
+      TabOrder = 3
+      OnClick = btExcluirClick
+    end
+    object btCancelar: TPngBitBtn
+      Left = 339
+      Top = 23
+      Width = 97
+      Height = 43
+      Caption = 'Cancelar'
+      Enabled = False
+      TabOrder = 4
+      OnClick = btCancelarClick
+    end
+    object btConfirmar: TPngBitBtn
+      Left = 442
+      Top = 22
+      Width = 97
+      Height = 43
+      Caption = 'Confirmar'
+      Enabled = False
+      TabOrder = 5
+      OnClick = btConfirmarClick
+    end
+  end
+end

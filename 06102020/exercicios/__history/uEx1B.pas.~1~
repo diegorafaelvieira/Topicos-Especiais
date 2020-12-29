@@ -1,0 +1,32 @@
+unit uEx1B;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  Tfrm1B = class(TForm)
+    btSair: TButton;
+    procedure btSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm1B: Tfrm1B;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm1B.btSairClick(Sender: TObject);
+begin
+  //Ir Menu Principal
+  frm1B.Close;
+end;
+
+end.

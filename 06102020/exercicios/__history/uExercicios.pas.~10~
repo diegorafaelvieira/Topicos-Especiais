@@ -1,0 +1,50 @@
+unit uExercicios;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmMenu = class(TForm)
+    bt1A: TButton;
+    bt1B: TButton;
+    bt1C: TButton;
+    procedure bt1AClick(Sender: TObject);
+    procedure bt1BClick(Sender: TObject);
+    procedure bt1CClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMenu: TfrmMenu;
+
+implementation
+
+{$R *.dfm}
+
+uses uEx1A, uEx1B, uEx1C;
+
+procedure TfrmMenu.bt1AClick(Sender: TObject);
+begin
+  //Ir Form 1A
+  frm1A.ShowModal;
+end;
+
+procedure TfrmMenu.bt1BClick(Sender: TObject);
+begin
+  //Ir Form 1B
+  frm1B.ShowModal;
+end;
+
+procedure TfrmMenu.bt1CClick(Sender: TObject);
+begin
+  //Ir Form 1C
+  frm1C.ShowModal
+end;
+
+end.

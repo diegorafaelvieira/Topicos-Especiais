@@ -1,0 +1,41 @@
+object frmEx2: TfrmEx2
+  Left = 0
+  Top = 0
+  Caption = 'Exerc'#237'cio 2'
+  ClientHeight = 186
+  ClientWidth = 418
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btSair: TButton
+    Left = 56
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 0
+    OnClick = btSairClick
+  end
+  object btMostrar: TButton
+    Left = 56
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'Mostrar'
+    TabOrder = 1
+    OnClick = btMostrarClick
+  end
+  object memoRes: TMemo
+    Left = 176
+    Top = 8
+    Width = 185
+    Height = 161
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/03/14 20:00:34.000.902,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2019/04/10 20:13:38.000.978,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2019/05/07 18:22:35.000.739,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/04/29 14:25:15.000.145,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/09/15 18:51:10.000.830,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/09/22 20:52:03.000.025,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/09/29 15:48:05.000.274,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/10/27 18:40:24.000.828,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/11/24 19:32:30.000.701,=C:\Meus Projetos Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/11/24 19:34:12.000.788,=C:\Meus Projetos Delphi\Unit2.pas</Transaction>
+    <Transaction>2020/11/24 19:34:51.000.436,C:\Meus Projetos Delphi\Unit2.dfm=C:\Loja\Fontes\uDM.dfm</Transaction>
+    <Transaction>2020/11/24 19:34:51.000.436,C:\Meus Projetos Delphi\Unit2.pas=C:\Loja\Fontes\uDM.pas</Transaction>
+    <Transaction>2020/11/24 19:34:57.000.539,C:\Meus Projetos Delphi\Unit1.pas=C:\Loja\Fontes\uMenu.pas</Transaction>
+    <Transaction>2020/11/24 19:34:57.000.539,C:\Meus Projetos Delphi\Unit1.dfm=C:\Loja\Fontes\uMenu.dfm</Transaction>
+    <Transaction>2020/11/24 19:35:03.000.214,C:\Meus Projetos Delphi\Project1.dproj=C:\Loja\Fontes\Loja.dproj</Transaction>
+    <Transaction>2020/11/24 19:49:50.000.000,=C:\Loja\Fontes\Unit2.pas</Transaction>
+    <Transaction>2020/11/24 19:49:56.000.486,C:\Loja\Fontes\Unit2.dfm=C:\Loja\Fontes\uClientes.dfm</Transaction>
+    <Transaction>2020/11/24 19:49:56.000.486,C:\Loja\Fontes\Unit2.pas=C:\Loja\Fontes\uClientes.pas</Transaction>
+    <Transaction>2020/11/24 19:54:03.000.653,C:\Loja\Fontes\Loja.dproj=C:\Loja\Loja.dproj</Transaction>
+    <Transaction>2020/11/30 16:43:30.000.628,=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\24112020\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 16:44:11.000.557,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\24112020\Loja\Fontes\uFornecedores.pas=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\24112020\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 16:44:11.000.557,C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\24112020\Loja\Fontes\uFornecedores.dfm=C:\Users\DIEGO\Documents\Embarcadero\Studio\Projects\24112020\Loja\Unit2.dfm</Transaction>
+    <Transaction>2020/11/30 17:48:19.000.764,=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:49:14.000.953,C:\Loja\Fontes\uFornecedores.pas=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:49:14.000.953,C:\Loja\Fontes\uFornecedores.dfm=C:\Loja\Unit2.dfm</Transaction>
+    <Transaction>2020/11/30 17:52:07.000.698,=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:53:50.000.385,C:\Loja\Fontes\uVendedores.pas=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:53:50.000.385,C:\Loja\Fontes\uVendedores.dfm=C:\Loja\Unit2.dfm</Transaction>
+    <Transaction>2020/11/30 17:54:39.000.295,=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:55:14.000.403,C:\Loja\Fontes\uProdutos.pas=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/11/30 17:55:14.000.403,C:\Loja\Fontes\uProdutos.dfm=C:\Loja\Unit2.dfm</Transaction>
+    <Transaction>2020/12/12 14:14:35.000.232,=C:\Loja\Unit2.pas</Transaction>
+    <Transaction>2020/12/12 14:16:16.000.491,C:\Loja\Unit2.dfm=C:\Loja\Fontes\uPesquisar.dfm</Transaction>
+    <Transaction>2020/12/12 14:16:16.000.491,C:\Loja\Unit2.pas=C:\Loja\Fontes\uPesquisar.pas</Transaction>
+    <Transaction>2020/12/13 23:54:58.000.280,=C:\Loja\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 23:57:14.000.378,C:\Loja\Fontes\uRelatorio.pas=C:\Loja\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 23:57:14.000.378,C:\Loja\Fontes\uRelatorio.dfm=C:\Loja\Unit1.dfm</Transaction>
+    <Transaction>2020/12/14 22:00:19.000.043,=C:\Loja\Unit1.pas</Transaction>
+    <Transaction>2020/12/14 22:06:58.000.241,=C:\Loja\Fontes\uRelProd.pas</Transaction>
+    <Transaction>2020/12/23 15:05:46.000.638,=C:\Loja\Fontes\uVenda.pas</Transaction>
+  </Transactions>
+</BorlandProject>

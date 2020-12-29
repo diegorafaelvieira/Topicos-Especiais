@@ -1,0 +1,225 @@
+object frmVenda: TfrmVenda
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Registro de Vendas'
+  ClientHeight = 484
+  ClientWidth = 716
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnDeactivate = FormDeactivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 16
+    Top = 9
+    Width = 59
+    Height = 25
+    Caption = 'Venda'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 241
+    Width = 47
+    Height = 25
+    Caption = 'Itens'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 16
+    Top = 40
+    Width = 681
+    Height = 193
+    TabOrder = 0
+    object Label3: TLabel
+      Left = 48
+      Top = 72
+      Width = 45
+      Height = 13
+      Caption = 'N'#186' Venda'
+      FocusControl = DBEdit1
+    end
+    object Label4: TLabel
+      Left = 48
+      Top = 99
+      Width = 23
+      Height = 13
+      Caption = 'Data'
+      FocusControl = DBEdit2
+    end
+    object Label5: TLabel
+      Left = 38
+      Top = 131
+      Width = 33
+      Height = 13
+      Caption = 'Cliente'
+    end
+    object Label6: TLabel
+      Left = 38
+      Top = 158
+      Width = 46
+      Height = 13
+      Caption = 'Vendedor'
+    end
+    object DBEdit1: TDBEdit
+      Left = 101
+      Top = 70
+      Width = 134
+      Height = 21
+      DataField = 'NRVENDA'
+      DataSource = dm.dsVendas
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 241
+      Top = 96
+      Width = 134
+      Height = 21
+      DataField = 'DTVENDA'
+      DataSource = dm.dsVendas
+      TabOrder = 1
+      Visible = False
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 101
+      Top = 123
+      Width = 316
+      Height = 21
+      DataField = 'CDCLIENTE'
+      DataSource = dm.dsVendas
+      KeyField = 'CDCLIENTE'
+      ListField = 'DCCLIENTE'
+      ListSource = dm.dsClientes
+      TabOrder = 2
+    end
+    object DBLookupComboBox2: TDBLookupComboBox
+      Left = 101
+      Top = 150
+      Width = 316
+      Height = 21
+      DataField = 'CDVENDEDOR'
+      DataSource = dm.dsVendas
+      KeyField = 'CDVENDEDOR'
+      ListField = 'DCVENDEDOR'
+      ListSource = dm.dsVendedores
+      TabOrder = 3
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 0
+      Top = 0
+      Width = 680
+      Height = 49
+      DataSource = dm.dsVendas
+      TabOrder = 4
+    end
+    object DateTimePicker1: TDateTimePicker
+      Left = 101
+      Top = 97
+      Width = 134
+      Height = 21
+      Date = 44180.000000000000000000
+      Time = 0.860192245367215900
+      TabOrder = 5
+      OnClick = DateTimePicker1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 16
+    Top = 272
+    Width = 681
+    Height = 193
+    TabOrder = 1
+    object DBGrid1: TDBGrid
+      Left = 38
+      Top = 56
+      Width = 591
+      Height = 120
+      DataSource = dm.dsItens
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'NRVENDA'
+          Title.Caption = 'N'#186
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -11
+          Title.Font.Name = 'Tahoma'
+          Title.Font.Style = [fsBold]
+          Width = 38
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NRITEM'
+          Title.Caption = 'Item'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DCPRODUTO'
+          Title.Caption = 'Produto'
+          Width = 200
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'CDPRODUTO'
+          Visible = False
+        end
+        item
+          Expanded = False
+          FieldName = 'QTVENDA'
+          Title.Caption = 'Qtd'
+          Width = 55
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VLPRODUTO'
+          Title.Caption = 'Vlr. Unit'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TOTAL'
+          Title.Alignment = taRightJustify
+          Title.Caption = 'Total'
+          Visible = True
+        end>
+    end
+    object DBNavigator2: TDBNavigator
+      Left = 1
+      Top = 1
+      Width = 679
+      Height = 49
+      DataSource = dm.dsItens
+      Align = alTop
+      TabOrder = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+    end
+  end
+end
